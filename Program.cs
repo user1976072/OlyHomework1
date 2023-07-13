@@ -1,86 +1,62 @@
-﻿// задание 2
+﻿// решение заданий к семинару №2
+//Задача 10
 /*
-using System.ComponentModel.DataAnnotations;
 
-
-Console.WriteLine("number1: ");
-int number1 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("number2: ");
-int number2 = Convert.ToInt32(Console.ReadLine());
-
-int Min, Max;
-
-if (number1 < number2)
+void SecondNum(int number)
 {
-    Min = number1;
-    Max = number2;
-}
-else
-{
-    Min = number2;
-    Max = number1;
-}
+    int SecondNum = (number / 10) % 10;
+    Console.WriteLine ("Вторая цифра числа: " + SecondNum);
+} 
 
-Console.WriteLine("Min: " + Min);
-Console.WriteLine("Max: " + Max);
-
-*/
-
-//задание 4
-/*
-Console.WriteLine("number1: ");
-int number1 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("number2: ");
-int number2 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("number3: ");
-int number3 = Convert.ToInt32(Console.ReadLine());
-
-int Max;
-
-if (number1 > number2 && number1 > number3)
-{
-    Max = number1;
-}
-else if (number2 > number1 && number2 > number3)
-{
-    Max = number2;
-}
-else
-{
-    Max = number3;
-}
-Console.WriteLine("max: " + Max);
-
-*/
-
-//задание 6
-/*
-Console.WriteLine("number: ");
+Console.WriteLine("Enter your number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number % 2 == 0)
-{
-    Console.WriteLine("The number is even");
-}
-else
-{
-    Console.WriteLine("The number is odd");
-}
-
+SecondNum (number);
 */
 
-// задание 8
-
-Console.WriteLine("number: ");
-int N = Convert.ToInt32(Console.ReadLine());
-
-int number = 2;
-
-while (number <= N)
+// Задача №13
+/*
+void ThirdNum(int number)
 {
-   Console.WriteLine("number: " + number); 
-   number += 2;
+  if (number > 99 && number <= 999)
+  {
+    number = number % 10;
+    Console.WriteLine("Третье число: " + number);
+  }
+  else if (number > 999 && number <= 9999)
+    {
+         number = (number / 10) % 10;
+         Console.WriteLine("Третье число: " + number);
+    }
+       else if (number > 9999 && number <= 99999)
+       {
+              number = (number / 100) % 10;
+              Console.WriteLine("Третье число: " + number);
+       }
+            else if (number < 100)
+                   Console.WriteLine("Третья цифра числа отсутствует");
+                 else 
+                   Console.WriteLine("Число имеет более 5 цифр");
 }
+Console.WriteLine("Укажите число: ");
+int Tnumber = Convert.ToInt32(Console.ReadLine());
+ThirdNum(Tnumber);
+*/
+
+
+// Задача № 15
+
+void Week(int Day)
+{
+  if (Day == 6) 
+    Console.WriteLine ($"является выходным днем {Day}");
+  else if (Day == 7) 
+    Console.WriteLine ($"является выходным днем {Day}");
+       else
+         Console.WriteLine ($"не является выходным днем {Day}");
+}
+
+Console.WriteLine ("Укажи день недели: ");
+int userNum = Convert.ToInt32(Console.ReadLine());
+Week(userNum);
+
